@@ -1,0 +1,142 @@
+/* 🌸 GERAL */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(#ffd6e7, #ffffff);
+  text-align: center;
+}
+.subtitulo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  color: #ff4d88;
+  margin-top: -10px;
+}
+h1 {
+  margin-top: 30px;
+  color: #ff4d88;
+  font-family: "Arial Rounded MT Bold", "Ubuntu", sans-serif;
+  font-size: 26px;
+  font-family: "Arial Rounded MT Bold", "Ubuntu", sans-serif;
+}
+
+.divisor {
+    margin: 20px auto;
+    width: 200px;
+    color: #ff4d88;
+    text-align: center;
+}
+
+.carta {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  line-height: 1.6;
+  color: #333;
+}
+
+h2 {
+  margin-top: 30px;
+  color: #ff4d88;
+  font-family: "Arial Rounded MT Bold", "Ubuntu", sans-serif;
+  font-size: 22px;
+}
+
+.intro-amor {
+  font-size: 14px;
+  color: #555;
+  margin: 5px;
+  font-family: "Arial Rounded MT Bold", "Ubuntu", sans-serif;
+}
+
+.botões-amor button {
+  background-color: #ff4d88;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botões-amor button:hover {
+  background-color: #ff1a66;
+  transform: scale(1.05);
+}
+
+.mensagens-amor p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+  font-family: "Arial Rounded MT Bold", "Ubuntu", sans-serif;
+}
+
+.fotos img {
+  width: 150px;
+  margin: 10px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.fotos img:hover {
+  transform: scale(1.08);
+}
+
+.musicas p {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 10px;
+  border-radius: 15px;
+  margin: 10px;
+  color: #ff4d88;
+}
+
+    .galaxia {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      color: white;
+    }
+
+    .estrelas {
+      width: 100%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/stardust.png');
+      animation: move 60s linear infinite;
+    }
+
+    @keyframes move {
+      from {background-position: 0 0;}
+      to {background-position: 1000px 1000px;}
+    }
+    .texto-galaxia {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      text-align: center;
+      font-family: "Arial Rounded MT Bold", "Ubuntu", sans-serif;
+      font-size: 26px;
+    }
+.btn {
+  margin-top: 15px;
+  background-color: #ff4d88;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #ff1a66;
+  transform: scale(1.05);
+}
