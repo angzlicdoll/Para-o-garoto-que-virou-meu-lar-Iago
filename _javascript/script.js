@@ -30,15 +30,14 @@ function fecharGalaxia() {
 }
 
 function tocarMusica() {
-  var musica = document.getElementById("musica");
+    var musica = document.getElementById("musica");
 
-  if (musica.paused) {
-    musica.play().catch(function(error) {
-      console.log("Erro no play, tentando recarregar...");
-      musica.load(); 
-      musica.play();
-    });
-  } else {
-    musica.pause();
-  }
+    if (musica.paused) {
+        musica.load(); 
+        musica.play().catch(function(error) {
+            console.log("O celular ainda está bloqueando: ", error);
+        });
+    } else {
+        musica.pause();
+    }
 }
