@@ -33,9 +33,12 @@ function tocarMusica() {
     var musica = document.getElementById("musica");
 
     if (musica.paused) {
-        musica.load(); 
+        
         musica.play().catch(function(error) {
-            console.log("O celular ainda está bloqueando: ", error);
+            console.log("Erro ao tocar: ", error);
+            
+            musica.load();
+            musica.play();
         });
     } else {
         musica.pause();
