@@ -22,12 +22,23 @@ function mostrar(id) {
   }
 }
 function abrirGalaxia() {
-      document.getElementById('galaxia').style.display = 'block';
-    }
+  document.getElementById('galaxia').style.display = 'block';
+}
 
-    function fecharGalaxia() {
-      document.getElementById('galaxia').style.display = 'none';
-    }
-    function tocarMusica() {
-  document.getElementById("musica").play();
+function fecharGalaxia() {
+  document.getElementById('galaxia').style.display = 'none';
+}
+
+function tocarMusica() {
+  var musica = document.getElementById("musica");
+
+  if (musica.paused) {
+    musica.play().catch(function(error) {
+      console.log("Erro no play, tentando recarregar...");
+      musica.load(); 
+      musica.play();
+    });
+  } else {
+    musica.pause();
+  }
 }
