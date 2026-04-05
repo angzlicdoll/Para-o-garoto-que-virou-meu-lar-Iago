@@ -28,24 +28,21 @@ function abrirGalaxia() {
 function fecharGalaxia() {
   document.getElementById('galaxia').style.display = 'none';
 }
-
 function tocarMusica() {
     var musica = document.getElementById("musica");
-
-    if (!musica.src || musica.src === "") {
-        musica.src = "./november-rain.mp3";
-    }
+    
+    musica.muted = false; 
+    musica.volume = 1.0;
 
     if (musica.paused) {
        
-        musica.load(); 
-        
         var playPromise = musica.play();
 
         if (playPromise !== undefined) {
-            playPromise.catch(function(error) {
-                
-                console.log("Erro ao tocar, tentando novamente...");
+            playPromise.then(_ => {
+                console.log("Tocando!");
+            }).catch(error => {
+                musica.load();
                 musica.play();
             });
         }
