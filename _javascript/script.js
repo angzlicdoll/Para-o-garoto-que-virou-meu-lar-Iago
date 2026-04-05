@@ -32,14 +32,23 @@ function fecharGalaxia() {
 function tocarMusica() {
     var musica = document.getElementById("musica");
 
+    if (!musica.src || musica.src === "") {
+        musica.src = "./november-rain.mp3";
+    }
+
     if (musica.paused) {
+       
+        musica.load(); 
         
-        musica.play().catch(function(error) {
-            console.log("Erro ao tocar: ", error);
-            
-            musica.load();
-            musica.play();
-        });
+        var playPromise = musica.play();
+
+        if (playPromise !== undefined) {
+            playPromise.catch(function(error) {
+                
+                console.log("Erro ao tocar, tentando novamente...");
+                musica.play();
+            });
+        }
     } else {
         musica.pause();
     }
