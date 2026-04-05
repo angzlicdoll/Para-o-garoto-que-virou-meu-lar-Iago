@@ -30,20 +30,22 @@ function fecharGalaxia() {
 }
 function tocarMusica() {
     var musica = document.getElementById("musica");
-    
-    musica.muted = false; 
+
+
+    musica.muted = false;
     musica.volume = 1.0;
 
     if (musica.paused) {
-       
+        
         var playPromise = musica.play();
 
         if (playPromise !== undefined) {
             playPromise.then(_ => {
-                console.log("Tocando!");
+                console.log("Som liberado!");
             }).catch(error => {
-                musica.load();
+               
                 musica.play();
+                console.log("Tentando novamente após bloqueio...");
             });
         }
     } else {
